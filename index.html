@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
 </head>
+
 <body>
 
 <header class="page-header">
@@ -21,35 +23,33 @@
     <ul class="navigation-actions">
       <li class="navigation-item">
         <a class="navigation-link" href="#">
-          <img src="" alt="Поиск">
+          Поиск
         </a>
       </li>
       <li class="navigation-item">
         <a class="navigation-link" href="#">
-          <img src="" alt="Избранное">
+          Избранное
           <span class="favourite-count">12</span>
         </a>
       </li>
       <li class="navigation-item">
-        <a class="navigation-link" href="#">Хочу сюда!</a>
-        <!--Непонятно назначение, ссылка или кнопка: <button class="navigation-link button-brown">Хочу сюда!</button>-->
+        <a class="navigation-link button-brown" href="#">Хочу сюда!</a>
       </li>
     </ul>
   </nav>
 </header>
 
 <main class="main-index">
-  <div class="card">
-    <p class="card-greeting">Welcome <span class="card-subgreeting">to the gorgeous</span></p>
-    <h1 class="card-title">Sedona</h1>
-    <p class="card-slogan">"Because the Grand Canyon sucks!"</p>
-  </div>
+  <section class="welcome">
+  <!---Горы на фоне декоративные-->
+  <img src="" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
+  </section>
 
   <section class="advantages">
-    <div class="advantages-header">
+    <header class="advantages-header">
       <h2 class="advantages-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
       <p class="advantages-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
-    </div>
+    </header>
 
     <ol class="advantages-list">
       <li class="advantages-item">
@@ -75,6 +75,7 @@
           </li>
         </ul>
       </li>
+
       <li class="advantages-item">
         <h3 class="advantages-title">Там есть мост дьявола</h3>
         <p class="advantages-number">№2</p>
@@ -101,9 +102,10 @@
   <section class="search">
     <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
     <p class="search-interest">Заинтересовались?</p>
-    <p class="search-offer">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
-      Седоне</p>
-    <button class="button button-brown button-search">Поиск гостиницы в Седоне</button>
+    <p class="search-offer">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц
+      в&nbsp;Седоне</p>
+    <button class="button button-brown button-search">Поиск гостиницы в&nbsp;Седоне</button>
+    <!--При клике на эту кнопку откроется всплывающее окно-->
   </section>
 
   <section class="subscription">
@@ -111,36 +113,41 @@
     <p class="subscription-promise">Только полезная информация и никакого спама, честное бойскаутское!</p>
     <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
       <label class="visually-hidden" for="subscription-email">Email</label>
-      <input class="field" type="email" placeholder="Ваш e-mail" name="subscription-email" id="subscription-email" required>
+      <input class="field" type="email" placeholder="Ваш e-mail" name="subscription-email" id="subscription-email"
+             required>
       <button class="button button-blue subscription-button" type="submit">Подписаться</button>
     </form>
   </section>
 </main>
 
 <footer class="page-footer">
+
   <section class="footer-social">
     <h2 class="visually-hidden">Социальные сети</h2>
     <ul class="footer-social-list">
       <li class="footer-social-item">
-        <a href="#"><img src="" alt="VK"></a>
+        <a href="#" target="_blank"><img src="" alt="VK"></a>
       </li>
       <li class="footer-social-item">
-        <a href="#"><img src="" alt="Telegram"></a>
+        <a href="#" target="_blank"><img src="" alt="Telegram"></a>
       </li>
       <li class="footer-social-item">
-        <a href="#"><img src="" alt="Youtube"></a>
+        <a href="#" target="_blank"><img src="" alt="Youtube"></a>
       </li>
     </ul>
   </section>
+
   <section class="footer-contacts">
     <h2 class="visually-hidden">Контакты</h2>
     <address class="footer-contacts-address">
       <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
     </address>
   </section>
+
   <section class="footer-copyright">
-    <a href="https://htmlacademy.ru"><img src="" alt="Логотип Html-Academy"></a>
+    <a href="https://htmlacademy.ru" target="_blank"><img src="" alt="Логотип Html-Academy"></a>
   </section>
 </footer>
 </body>
+
 </html>
