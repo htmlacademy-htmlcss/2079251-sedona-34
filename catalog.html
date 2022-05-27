@@ -129,7 +129,7 @@
     </form>
   </section>
 
-  <section class="catalog-specify">
+  <div class="catalog-specify"> <!--т.к. не можем дать название, поэтому не section -->
     <p class="result">Найдено гостиниц: 38</p>
     <form class="catalog-filter-specify" action="https://echo.htmlacademy.ru/" method="get">
       <fieldset class="catalog-filter-specify-group">
@@ -155,9 +155,10 @@
         </a>
       </fieldset>
     </form>
-  </section>
+  </div>
 
   <section class="hotel">
+    <h2 class="visually-hidden">Отели, найденные по выбранным параметрам</h2>
     <ul class="hotel-list">
       <li class="hotel-card">
         <a class="hotel-card-link" href="#">
@@ -230,7 +231,7 @@
     </ul>
   </section>
 
-  <section class="pagination">
+  <div class="pagination">
     <ul class="pagination-list">
       <li class="pagination-item">
         <a class="pagination-link pagination-current button button-grey">1</a>
@@ -260,8 +261,7 @@
         <option value="10">10</option>
       </select>
     </label>
-
-  </section>
+  </div>
 
   <section class="subscription">
     <h2 class="subscription-title">Подпишитесь на рассылку</h2>
@@ -305,6 +305,7 @@
   </section>
 
   <section class="footer-copyright">
+    <h2 class="visually-hidden">Ссылка на сайт html-Academy</h2>
     <a href="https://htmlacademy.ru" target="_blank">
       <img src="content/images/logo_htmlacademy.svg" width="115" height="34" alt="Логотип Html-Academy.">
     </a>
