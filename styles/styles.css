@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,50 +10,57 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/ptsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
-
-/*@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 400;
-  src: url("/fonts/ptsans-italic.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 700;
-  src: url("fonts/pt-sans-bold-italic.woff2") format("woff2");
-  font-display: swap;
-} */
 
 body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
+  font-weight: 400;
   line-height: 26px;
-  color: #000000;
+  color: #000;
+}
+
+/*для удобства отображения скрытых элементов*/
+.visually-hidden {
+  color: green;
+  font-size: 10px;
 }
 
 .button {
   font-family: inherit;
-  color: #ffffff;
+  color: #fff;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
+  border: 0;
+  border-radius: 3px;
+  padding: 12px 15px;
 }
 
-.button-brown {
+.button.button-brown {
   background-color: #756157;
 }
 
 .button-blue {
   background-color: #82B3D3;
+}
+
+.subscription-button {
+  width: 170px;
+  height: 36px;
+}
+
+.button-search {
+  width: 544px;
+  height: 36px;
+  text-align: center;
+  vertical-align: center;
 }
 
 .navigation-list,
@@ -64,6 +71,8 @@ body {
 
 .navigation-item {
   list-style: none;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .navigation-link {
@@ -76,9 +85,20 @@ body {
 }
 
 .welcome {
-  background-image: url("/images/background-mountains.jpg");
+  background-image: url("../images/background-welcome.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
+  background-color: #2b4049;
+  text-align: center;
+}
+
+.welcome::after {
+  content: "";
+  background-image: url("../images/devider-welcome.svg");
+  background-repeat: no-repeat;
+  display: block;
+  width: 100%;
+  height: 57px;
 }
 
 .advantages-heading {
@@ -87,5 +107,163 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-align: center;
-  vertical-align: top;
+  vertical-align: middle;
+}
+
+.advantages-suggest {
+  color: #333;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.advantages-list,
+.advantages-list-inserted {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+
+.advantages-item {
+  background-color: rgba(131, 179, 211, 0.12);
+  list-style: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.advantages-item .advantages-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.advantages-item .advantages-number {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.advantages-item .advantages-description {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333;
+}
+
+
+.advantages-item.advantages-town,
+.advantages-item.advantages-bridge {
+  background-color: rgba(131, 179, 211);
+  color: #fff;
+}
+
+.advantages-item.advantages-town .advantages-description-white,
+.advantages-item.advantages-bridge .advantages-description-white {
+  color: #fff;
+}
+
+.advantages-list-inserted {
+  background-color: #fff;
+}
+
+.advantages-item.advantages-accommodation,
+.advantages-item.advantages-souvenirs,
+.advantages-item.advantages-food {
+  color: #000;
+}
+
+.advantages-item.advantages-food {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item.advantages-accommodation,
+.advantages-item.advantages-souvenirs,
+.advantages-item.advantages-road {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item.advantages-accommodation {
+  background-image: url("../images/icons/accommodation.svg");
+  background-repeat: no-repeat;
+  background-size: 75px 72px;
+  /*background-position: center;*/
+}
+
+.advantages-item.advantages-food {
+  background-image: url("../images/icons/food.svg");
+  background-repeat: no-repeat;
+  background-size: 75px 72px;
+  /*background-position: center;*/
+}
+
+.advantages-item.advantages-souvenirs {
+  background-image: url("../images/icons/souvenirs.svg");
+  background-repeat: no-repeat;
+  background-size: 75px 72px;
+  /*background-position: center;*/
+}
+
+.search {
+  text-align: center;
+}
+
+.search .search-interest {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.search .search-offer {
+  color: #333;
+}
+
+.subscription {
+  text-align: center;
+  color: white;
+}
+
+.subscription-with-background {
+  background-image: url("../images/background-subscription.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #7cabab;
+}
+
+.page-footer .footer-social-item {
+  list-style: none;
+  text-align: left;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+.footer-social-item-vk {
+  background-image: url("../images/icons/social/vk.svg");
+  background-repeat: no-repeat;
+}
+
+.footer-social-item-telegram {
+  background-image: url("../images/icons/social/telegram.svg");
+  background-repeat: no-repeat;
+}
+
+.footer-social-item-youtube {
+  background-image: url("../images/icons/social/youtube.svg");
+  background-repeat: no-repeat;
+}
+
+.page-footer .footer-contacts-address {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page-footer .contacts-phone {
+  text-decoration: none;
+  font-style: normal;
+  color: inherit;
+}
+
+.page-footer .footer-copyright {
+  text-align: right;
 }
