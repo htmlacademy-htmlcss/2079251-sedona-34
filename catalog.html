@@ -44,13 +44,15 @@
 </header>
 
 <main class="main-inner">
-  <section class="title-and-filters">
+  <div class="title-and-filters">
     <header class="inner-header">
       <h1 class="inner-header-title">Гостиницы Седоны</h1>
 
       <ol class="breadcrumbs">
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link" href="index.html">Главная</a>
+          <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html">
+            <span class="visually-hidden">Главная</span>
+          </a>
         </li>
         <li class="breadcrumbs-item">
           <span class="breadcrumbs-link">Гостиницы</span>
@@ -124,14 +126,14 @@
         <div class="amount-slider"></div>-->
       </fieldset>
       <fieldset class="catalog-filter-group">
-        <button class="button button-blue" type="submit">Применить</button>
-        <button class="button button-transparent" type="reset">Сбросить</button>
+        <button class="button button-blue button-submit" type="submit">Применить</button>
+        <button class="button button-transparent button-reset" type="reset">Сбросить</button>
       </fieldset>
     </form>
-  </section>
+  </div>
 
   <div class="catalog-specify"> <!--Т.к. не можем дать название, поэтому не section -->
-    <p class="result">Найдено гостиниц: 38</p>
+    <p class="catalog-result">Найдено гостиниц: 38</p>
     <form class="catalog-filter-specify" action="https://echo.htmlacademy.ru/" method="get">
       <fieldset class="catalog-filter-specify-group">
         <legend class="visually-hidden">Уточняющие параметры</legend>
@@ -146,11 +148,11 @@
           <!--svg-иконка-->
           <span class="visually-hidden">Показать карточки</span>
         </a>
-        <a href="#" class="view-type">
+        <a href="#" class="view-type view-type-big-cards">
           <!--svg-иконка-->
           <span class="visually-hidden">Показать большие карточки</span>
         </a>
-        <a href="#" class="view-type">
+        <a href="#" class="view-type view-type-list">
           <!--svg-иконка-->
           <span class="visually-hidden">Показать список</span>
         </a>
@@ -174,12 +176,12 @@
           <button class="button button-blue" type="submit">В избранное</button>
         </form>
         <div class="stars">
-          <span>star<!--svg-картинка предположительно--></span>
-          <span>star<!--svg-картинка предположительно--></span>
-          <span>star<!--svg-картинка предположительно--></span>
-          <span>star<!--svg-картинка предположительно--></span>
+          <span class="hotel-rating-star">star</span>
+          <span class="hotel-rating-star">star</span>
+          <span class="hotel-rating-star">star</span>
+          <span class="hotel-rating-star">star</span>
         </div>
-        <span class="button button-grey">Рейтинг:8,5</span>
+        <span class="button button-grey hotel-rating-in-numbers">Рейтинг: 8,5</span>
       </li>
       <li class="hotel-card">
         <a class="hotel-card-link" href="#">
@@ -194,12 +196,12 @@
           <button class="button button-green" type="submit">В избранном</button>
         </form>
         <div class="stars">
-          <span>star<!--svg-картинка предположительно--></span>
-          <span>star<!--svg-картинка предположительно--></span>
-          <span>star<!--svg-картинка предположительно--></span>
-          <span>star<!--svg-картинка предположительно--></span>
+          <span class="hotel-rating-star">star</span>
+          <span class="hotel-rating-star">star</span>
+          <span class="hotel-rating-star">star</span>
+          <span class="hotel-rating-star">star</span>
         </div>
-        <span class="button button-grey">Рейтинг:9,2</span>
+        <span class="button button-grey hotel-rating-in-numbers">Рейтинг: 9,2</span>
       </li>
       <li class="hotel-card">
         <a class="hotel-card-link" href="#">
@@ -213,11 +215,11 @@
           <button class="button button-blue" type="submit">В избранное</button>
         </form>
         <div class="stars">
-          <span>star<!--svg-картинка предположительно--></span>
-          <span>star<!--svg-картинка предположительно--></span>
-          <span>star<!--svg-картинка предположительно--></span>
+          <span class="hotel-rating-star">star</span>
+          <span class="hotel-rating-star">star</span>
+          <span class="hotel-rating-star">star</span>
         </div>
-        <span class="button button-grey">Рейтинг:6,9</span>
+        <span class="button button-grey hotel-rating-in-numbers">Рейтинг: 6,9</span>
       </li>
       <li class="hotel-card">
         <a class="hotel-card-link" href="#">
@@ -232,15 +234,15 @@
           <button class="button button-blue" type="submit">В избранное</button>
         </form>
         <div class="stars">
-          <span>star<!--svg-картинка предположительно--></span>
-          <span>star<!--svg-картинка предположительно--></span>
+          <span class="hotel-rating-star">star</span>
+          <span class="hotel-rating-star">star</span>
         </div>
-        <span class="button button-grey">Рейтинг:5,0</span>
+        <span class="button button-grey hotel-rating-in-numbers">Рейтинг: 5,0</span>
       </li>
     </ul>
   </section>
 
-  <div class="pagination">
+  <div class="pagination-and-quantity">
     <ul class="pagination-list">
       <li class="pagination-item">
         <a class="pagination-link pagination-current button button-grey">1</a>
@@ -272,9 +274,9 @@
     </label>
   </div>
 
-  <section class="subscription">
+  <section class="subscription subscription-dark-letters">
     <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-    <p class="subscription-promise">Только полезная информация и никакого спама, честное бойскаутское!</p>
+    <p class="subscription-promise subscription-promise-dark-letters">Только полезная информация и никакого спама, честное бойскаутское!</p>
     <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
       <label class="visually-hidden" for="subscription-email">Email</label>
       <input class="field" type="email" placeholder="Ваш e-mail" name="subscription-email" id="subscription-email"
