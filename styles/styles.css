@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   src: local("PT Sans"),
-       url("../fonts/ptsans-400.woff2") format("woff2");
+  url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -12,7 +12,7 @@
   font-style: normal;
   font-weight: 700;
   src: local("PT Sans"),
-       url("../fonts/ptsans-700.woff2") format("woff2");
+  url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -67,21 +67,18 @@ body {
   text-transform: inherit;
 }
 
-.button.subscription-button {
+.button.button-subscribe {
   width: 170px;
-  height: 36px;
 }
 
 .button.button-search {
   width: 544px;
-  height: 36px;
   text-align: center;
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 .button.button-submit {
   width: 130px;
-  height: 20px;
   padding: 14px 15px;
 }
 
@@ -176,6 +173,7 @@ body {
   background-color: rgba(131, 179, 211);
   color: #fff;
 }
+
 .advantages-item.advantages-blue .advantages-description {
   color: #fff;
 }
@@ -184,6 +182,7 @@ body {
   background-color: rgba(131, 179, 211, 0.12);
   color: #000;
 }
+
 .advantages-item.advantages-blue-012 .advantages-description {
   color: #333;
 }
@@ -192,6 +191,7 @@ body {
   background-color: rgba(131, 179, 211, 0.2);
   color: #000;
 }
+
 .advantages-item.advantages-blue-02 .advantages-description {
   color: #333;
 }
@@ -200,6 +200,7 @@ body {
   background-color: #fff;
   color: #000;
 }
+
 .advantages-item.advantages-white .advantages-description {
   color: #333;
 }
@@ -242,14 +243,29 @@ body {
 
 .subscription {
   text-align: center;
-  color: white;
 }
 
-.subscription-with-background {
+.subscription .subscription-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.subscription .subscription-promise {
+  color: #333;
+}
+
+.subscription.subscription-with-background {
   background-image: url("../images/background-subscription.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-color: #7cabab;
+  color: #fff;
+}
+
+.subscription.subscription-with-background .subscription-promise {
+  color: #fff;
 }
 
 .page-footer .footer-social-item {
@@ -259,17 +275,17 @@ body {
   text-decoration: none;
 }
 
-.footer-social-item-vk {
+.footer-social-item.footer-social-item-vk {
   background-image: url("../images/icons/social/vk.svg");
   background-repeat: no-repeat;
 }
 
-.footer-social-item-telegram {
+.footer-social-item.footer-social-item-telegram {
   background-image: url("../images/icons/social/telegram.svg");
   background-repeat: no-repeat;
 }
 
-.footer-social-item-youtube {
+.footer-social-item.footer-social-item-youtube {
   background-image: url("../images/icons/social/youtube.svg");
   background-repeat: no-repeat;
 }
@@ -291,52 +307,54 @@ body {
   text-align: right;
 }
 
+/* CATalog */
 .title-and-filters {
   background-image: url("/images/background-filter.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-color: #7cabab;
   color: #fff;
+  padding: 35px 70px 70px;
 }
 
 .inner-header-title {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
-  padding: 70px;
 }
 
-.breadcrumbs-item {
+.breadcrumbs .breadcrumbs-item {
   list-style: none;
   vertical-align: middle;
 }
 
-.breadcrumbs-link {
+.breadcrumbs .breadcrumbs-link {
   text-decoration: none;
   font-style: normal;
   font-size: 16px;
   line-height: 21px;
 }
 
-.breadcrumbs-link-home {
+.breadcrumbs .breadcrumbs-link-home {
   background-image: url("/images/icons/home.svg");
   background-repeat: no-repeat;
 }
 
 
-.catalog-filter-list {
+.catalog-filter .catalog-filter-list {
   list-style: none;
 }
 
-.catalog-filter-title {
+.catalog-filter .catalog-filter-title {
   font-weight: 700;
   font-size: 20px;
 }
 
-.catalog-filter-item {
+.catalog-filter .catalog-filter-item {
   font-size: 18px;
   line-height: 21px;
 }
+
 
 .catalog-specify .catalog-result {
   font-weight: 700;
@@ -351,20 +369,21 @@ body {
   color: #333333;
 }
 
-.catalog-demonstration .view-type-current {
+.catalog-demonstration .view-type.view-type-cards {
   background-image: url("/images/icons/view-cards.svg");
   background-repeat: no-repeat;
 }
 
-.catalog-demonstration .view-type-big-cards {
+.catalog-demonstration .view-type.view-type-big-cards {
   background-image: url("/images/icons/view-big-cards.svg");
   background-repeat: no-repeat;
 }
 
-.catalog-demonstration .view-type-list {
+.catalog-demonstration .view-type.view-type-list {
   background-image: url("/images/icons/view-list.svg");
   background-repeat: no-repeat;
 }
+
 
 .hotel-list {
   list-style: none;
@@ -401,6 +420,7 @@ body {
   color: #333;
 }
 
+
 .pagination-and-quantity {
   border-top: 1px solid #E6E6E6;
 }
@@ -409,14 +429,14 @@ body {
   list-style: none;
 }
 
-.pagination-link {
+.pagination-list .pagination-link {
   color: #fff;
   font-size: 20px;
   line-height: 36px;
   text-align: center;
 }
 
-.pagination-and-quantity .pagination-current {
+.pagination-list .pagination-current {
   color: #000;
 }
 
@@ -427,10 +447,3 @@ body {
   color: #333333;
 }
 
-.subscription-dark-letters {
-  color: #000;
-}
-
-.subscription-promise-dark-letters {
-  color: #333;
-}

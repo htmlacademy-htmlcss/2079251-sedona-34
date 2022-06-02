@@ -144,7 +144,7 @@
         </select>
       </fieldset>
       <fieldset class="catalog-demonstration">
-        <a class="view-type view-type-current" href="#">
+        <a class="view-type view-type-cards view-type-current" href="#">
           <!--svg-иконка-->
           <span class="visually-hidden">Показать карточки</span>
         </a>
@@ -264,24 +264,26 @@
       </li>
     </ul>
 
-    <label class="hotel-quantity-result">Гостиниц на странице:
-      <select class="hotel-quantity-number" name="quantity">
-        <option value="4" selected>4</option>
-        <option value="6">6</option>
-        <option value="8">8</option>
-        <option value="10">10</option>
-      </select>
-    </label>
+    <form action="https://echo.htmlacademy.ru/" method="get">
+      <label class="hotel-quantity-result">Гостиниц на странице:
+        <select class="hotel-quantity-number" name="quantity">
+          <option value="4" selected>4</option>
+          <option value="6">6</option>
+          <option value="8">8</option>
+          <option value="10">10</option>
+        </select>
+      </label>
+    </form>
   </div>
 
-  <section class="subscription subscription-dark-letters">
+  <section class="subscription">
     <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-    <p class="subscription-promise subscription-promise-dark-letters">Только полезная информация и никакого спама, честное бойскаутское!</p>
+    <p class="subscription-promise">Только полезная информация и никакого спама, честное бойскаутское!</p>
     <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
       <label class="visually-hidden" for="subscription-email">Email</label>
       <input class="field" type="email" placeholder="Ваш e-mail" name="subscription-email" id="subscription-email"
              required>
-      <button class="button button-blue subscription-button" type="submit">Подписаться</button>
+      <button class="button button-blue button-subscribe" type="submit">Подписаться</button>
     </form>
   </section>
 </main>
