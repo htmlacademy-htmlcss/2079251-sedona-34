@@ -2,7 +2,8 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  src: local("PT Sans"),
+       url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +11,8 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  src: local("PT Sans"),
+       url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -47,40 +49,40 @@ body {
   background-color: #756157;
 }
 
-.button-blue {
+.button.button-blue {
   background-color: #82B3D3;
 }
 
-.subscription-button {
+.button.button-grey {
+  background-color: #F2F2F2;
+}
+
+.button.button-green {
+  background-color: #7DB54F;
+}
+
+.button.button-transparent {
+  background-color: transparent;
+  font-weight: 400;
+  text-transform: inherit;
+}
+
+.button.subscription-button {
   width: 170px;
   height: 36px;
 }
 
-.button-search {
+.button.button-search {
   width: 544px;
   height: 36px;
   text-align: center;
   vertical-align: center;
 }
 
-.button-submit {
+.button.button-submit {
   width: 130px;
   height: 20px;
   padding: 14px 15px;
-}
-
-.button-reset {
-  background-color: transparent;
-  font-weight: 400;
-  text-transform: inherit;
-}
-
-.button-grey {
-  background-color: #F2F2F2;
-}
-
-.button-green {
-  background-color: #7DB54F;
 }
 
 .navigation-list,
@@ -117,7 +119,6 @@ body {
   background-image: url("../images/devider-welcome.svg");
   background-repeat: no-repeat;
   display: block;
-  width: 100%;
   height: 57px;
 }
 
@@ -142,9 +143,7 @@ body {
   padding-left: 0;
 }
 
-
 .advantages-item {
-  background-color: rgba(131, 179, 211, 0.12);
   list-style: none;
   text-align: center;
   vertical-align: middle;
@@ -169,36 +168,40 @@ body {
   color: #333;
 }
 
-
-.advantages-item.advantages-town,
-.advantages-item.advantages-bridge {
-  background-color: rgba(131, 179, 211);
-  color: #fff;
-}
-
-.advantages-item.advantages-town .advantages-description-white,
-.advantages-item.advantages-bridge .advantages-description-white {
-  color: #fff;
-}
-
-.advantages-list-inserted {
+.advantages-item .advantages-list-inserted {
   background-color: #fff;
 }
 
-.advantages-item.advantages-accommodation,
-.advantages-item.advantages-souvenirs,
-.advantages-item.advantages-food {
+.advantages-item.advantages-blue {
+  background-color: rgba(131, 179, 211);
+  color: #fff;
+}
+.advantages-item.advantages-blue .advantages-description {
+  color: #fff;
+}
+
+.advantages-item.advantages-blue-012 {
+  background-color: rgba(131, 179, 211, 0.12);
   color: #000;
 }
-
-.advantages-item.advantages-food {
-  background-color: rgba(131, 179, 211, 0.12);
+.advantages-item.advantages-blue-012 .advantages-description {
+  color: #333;
 }
 
-.advantages-item.advantages-accommodation,
-.advantages-item.advantages-souvenirs,
-.advantages-item.advantages-road {
+.advantages-item.advantages-blue-02 {
   background-color: rgba(131, 179, 211, 0.2);
+  color: #000;
+}
+.advantages-item.advantages-blue-02 .advantages-description {
+  color: #333;
+}
+
+.advantages-item.advantages-white {
+  background-color: #fff;
+  color: #000;
+}
+.advantages-item.advantages-white .advantages-description {
+  color: #333;
 }
 
 .advantages-item.advantages-accommodation {
