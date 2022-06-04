@@ -1,3 +1,11 @@
+/*:root {
+  --text-color-primary: #000;
+  --text-color-secondary: #333;
+}
+
+color: var(--text-color-secondary);
+*/
+
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -22,6 +30,19 @@ body {
   font-weight: 400;
   line-height: 26px;
   color: #000;
+  margin: 0;
+}
+
+.form input {
+  font-family: inherit;
+}
+
+.form fieldset {
+  font-family: inherit;
+}
+
+.form .select-control {
+  font-family: inherit;
 }
 
 /*для удобства отображения скрытых элементов*/
@@ -45,26 +66,20 @@ body {
   padding: 12px 15px;
 }
 
-.button.button-brown {
+.button.button-primary {
   background-color: #756157;
 }
 
-.button.button-blue {
+.button.button-secondary {
   background-color: #82B3D3;
 }
 
-.button.button-grey {
+.button.button-inactive {
   background-color: #F2F2F2;
 }
 
-.button.button-green {
+.button.button-selected {
   background-color: #7DB54F;
-}
-
-.button.button-transparent {
-  background-color: transparent;
-  font-weight: 400;
-  text-transform: inherit;
 }
 
 .button.button-subscribe {
@@ -80,6 +95,12 @@ body {
 .button.button-submit {
   width: 130px;
   padding: 14px 15px;
+}
+
+.button.button-reset {
+  background-color: transparent;
+  font-weight: 400;
+  text-transform: inherit;
 }
 
 .navigation-list,
@@ -205,6 +226,11 @@ body {
   color: #333;
 }
 
+.advantages-item.advantages-town {
+  background-image: url("../images/real-town.jpg");
+  background-repeat: no-repeat;
+}
+
 .advantages-item.advantages-accommodation {
   background-image: url("../images/icons/accommodation.svg");
   background-repeat: no-repeat;
@@ -318,7 +344,6 @@ body {
 }
 
 .inner-header-title {
-  font-weight: 700;
   font-size: 60px;
   line-height: 78px;
 }
@@ -395,7 +420,6 @@ body {
 }
 
 .hotel-card .hotel-card-title {
-  font-weight: 700;
   font-size: 24px;
   line-height: 28px;
 }
