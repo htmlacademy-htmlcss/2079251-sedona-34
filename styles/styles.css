@@ -252,6 +252,11 @@ body {
   /*background-position: center;*/
 }
 
+.advantages-item.advantages-bridge {
+  background-image: url("../images/devil-bridge.jpg");
+  background-repeat: no-repeat;
+}
+
 .search {
   text-align: center;
 }
