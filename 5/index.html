@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="styles/styles.css">
+  <link href="./styles/normalize.css" rel="stylesheet">
+  <link href="./styles/styles.css" rel="stylesheet">
   <base href="https://htmlacademy-htmlcss.github.io/2079251-sedona-34/5/">
 </head>
 
@@ -12,7 +13,7 @@
 
 <header class="page-header">
   <nav class="navigation">
-    <img class="logo" src="/content/images/logo-sedona.svg" width="139" height="70" alt="Логотип «Седона».">
+    <img alt="Логотип «Седона»." class="logo" height="70" src="./content/images/logo-sedona.svg" width="139">
     <ul class="navigation-list">
       <li class="navigation-item">
         <span class="navigation-link navigation-link-current">Главная</span>
@@ -21,7 +22,7 @@
         <a class="navigation-link" href="#">О Седоне</a>
       </li>
       <li class="navigation-item">
-        <a class="navigation-link" href="/catalog.html">Гостиницы</a>
+        <a class="navigation-link" href="./catalog.html">Гостиницы</a>
       </li>
     </ul>
     <ul class="navigation-actions">
@@ -37,7 +38,7 @@
         </a>
       </li>
       <li class="navigation-item">
-        <a class="button button-brown" href="#">Хочу сюда!</a>
+        <a class="button button-primary" href="#">Хочу сюда!</a>
       </li>
     </ul>
   </nav>
@@ -45,7 +46,7 @@
 
 <main class="main-index">
   <div class="welcome">
-    <img src="/content/images/welcome-text.svg" width="458" height="352"
+    <img height="352" src="./content/images/welcome-text.svg" width="458"
          alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
   </div>
 
@@ -60,7 +61,6 @@
         <h3 class="advantages-title">Настоящий городок</h3>
         <p class="advantages-number">— №1 —</p>
         <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-        <img class="advantages-photo" src="/content/images/real-town.jpg" alt="Улица города Седона.">
 
         <ul class="advantages-list-inserted">
           <li class="advantages-item advantages-blue-012 advantages-accommodation">
@@ -82,7 +82,7 @@
       </li>
 
       <li class="advantages-item advantages-blue advantages-bridge">
-        <img class="advantages-photo" src="/content/images/devil-bridge.jpg" alt="Страшный мост с бездной.">
+        <img alt="Страшный мост с бездной." class="advantages-photo" src="images/devil-bridge.jpg">
         <h3 class="advantages-title">Там есть мост дьявола</h3>
         <p class="advantages-number">— №2 —</p>
         <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
@@ -110,7 +110,7 @@
     <p class="search-interest">Заинтересовались?</p>
     <p class="search-offer">Укажите предполагаемые даты поездки, <br>и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц
       в&nbsp;Седоне</p>
-    <button class="button button-brown button-search">Поиск гостиницы в&nbsp;Седоне</button>
+    <button class="button button-primary button-search">Поиск гостиницы в&nbsp;Седоне</button>
     <!--При клике на эту кнопку откроется всплывающее окно-->
   </section>
 
@@ -121,7 +121,7 @@
       <label class="visually-hidden" for="subscription-email">Email</label>
       <input class="field" type="email" placeholder="Ваш e-mail" name="subscription-email" id="subscription-email"
              required>
-      <button class="button button-blue button-subscribe" type="submit">Подписаться</button>
+      <button class="button button-secondary button-subscribe" type="submit">Подписаться</button>
     </form>
   </section>
 </main>
@@ -159,7 +159,7 @@
   <section class="footer-copyright">
     <h2 class="visually-hidden">Ссылка на сайт html-Academy</h2>
     <a href="https://htmlacademy.ru" target="_blank">
-      <img src="/content/images/logo-htmlacademy.svg" width="115" height="34" alt="Логотип Html-Academy.">
+      <img alt="Логотип Html-Academy." height="34" src="./content/images/logo-htmlacademy.svg" width="115">
     </a>
   </section>
 </footer>
