@@ -24,31 +24,32 @@ color: var(--text-color-secondary);
   font-display: swap;
 }
 
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
   font-weight: 400;
   line-height: 26px;
   color: #000;
-  margin: 0;
-}
-
-.form input {
-  font-family: inherit;
-}
-
-.form fieldset {
-  font-family: inherit;
-}
-
-.form .select-control {
-  font-family: inherit;
 }
 
 /*для удобства отображения скрытых элементов*/
 .visually-hidden {
   color: tomato;
   font-size: 12px;
+}
+
+.select {
+  -webkit-appearance: none;
+  font-family: inherit;
 }
 
 .button {
@@ -103,16 +104,33 @@ body {
   text-transform: inherit;
 }
 
-.navigation-list,
-.navigation-actions {
-  margin-left: 0;
-  padding-left: 0;
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation .logo {
+  /*width: 139px; - уже задано в параметрах самого изображения? */
+  margin-right: 47px;
+  margin-left: 70px;
+}
+
+.navigation-list {
+  width: 430px;
+  margin: 0;
+  padding: 0;
 }
 
 .navigation-item {
   list-style: none;
   text-align: center;
   vertical-align: middle;
+}
+
+.navigation-actions {
+  max-width: 210px;
+  margin-left: auto;
 }
 
 .navigation-link {
@@ -122,6 +140,15 @@ body {
   vertical-align: middle;
   color: inherit;
   text-decoration: none;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .welcome {
@@ -157,14 +184,27 @@ body {
 
 .advantages-list,
 .advantages-list-inserted {
-  margin-left: 0;
-  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .advantages-item {
   list-style: none;
-  text-align: center;
   vertical-align: middle;
+  width: 400px;
+}
+
+.advantages-item .town-description {
+  width: 400px;
+}
+
+.advantages-item .bridge-description {
+  width: 400px;
+  margin-right: 0;
+  margin-left: auto;
 }
 
 .advantages-item .advantages-title {
@@ -229,6 +269,8 @@ body {
 .advantages-item.advantages-town {
   background-image: url("../images/real-town.jpg");
   background-repeat: no-repeat;
+  background-position: 400px;
+  width: 100%;
 }
 
 .advantages-item.advantages-accommodation {
@@ -255,6 +297,7 @@ body {
 .advantages-item.advantages-bridge {
   background-image: url("../images/devil-bridge.jpg");
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 .search {
@@ -299,6 +342,17 @@ body {
   color: #fff;
 }
 
+.page-footer-container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.page-footer .footer-social {
+  width: 180px;
+  margin-right: auto;
+}
+
 .page-footer .footer-social-item {
   list-style: none;
   text-align: left;
@@ -335,7 +389,7 @@ body {
 }
 
 .page-footer .footer-copyright {
-  text-align: right;
+  margin-left: auto;
 }
 
 /* CATalog */
