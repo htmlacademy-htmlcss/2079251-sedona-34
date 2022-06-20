@@ -11,12 +11,12 @@
 <div class="container">
   <header class="page-header">
     <nav class="navigation">
-      <a class="navigation-logo" href="/index.html">
-        <img alt="Логотип «Седона»." class="logo" height="70" src="./content/images/logo-sedona.svg" width="139">
+      <a class="navigation-logo" href="./index.html">
+        <img alt="Логотип «Седона»." height="70" src="./content/images/logo-sedona.svg" width="139">
       </a>
       <ul class="navigation-list">
         <li class="navigation-item">
-          <a class="navigation-link" href="/index.html">Главная</a>
+          <a class="navigation-link" href="./index.html">Главная</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">О Седоне</a>
@@ -28,17 +28,17 @@
       <ul class="navigation-list navigation-actions">
         <li class="navigation-item">
           <a class="navigation-link" href="#">
-            Поиск
+            <span class="visually-hidden">Поиск</span>
           </a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">
-            Избранное
-            <span class="favourite-count">12</span>
+            <span class="visually-hidden">Избранное</span>
+            <span class="visually-hidden favourite-count">12</span>
           </a>
         </li>
         <li class="navigation-item">
-          <a class="button button-primary" href="#">Хочу сюда!</a>
+          <a class="button button-primary button-small button-navigation" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
@@ -51,8 +51,8 @@
 
         <ol class="breadcrumbs">
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html">
-              <span class="visually-hidden">Главная</span>
+            <a class="breadcrumbs-link" href="index.html">
+              <span class="visually-hidden">Главная</span>Главная <!--todo: переделать на картинку-домик -->
             </a>
           </li>
           <li class="breadcrumbs-item">
@@ -62,7 +62,7 @@
       </header>
 
       <form action="https://echo.htmlacademy.ru/" class="catalog-filter" method="get">
-        <!--        <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>--><!--ВРЕМЕННО СКРЫВАЕМ-->
+        <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Инфраструктура:</legend>
           <ul class="catalog-filter-list">
@@ -134,9 +134,9 @@
     </div>
 
     <div class="main-catalog">
-      <div class="catalog-specify"> <!--Т.к. не можем дать название, поэтому не section -->
+      <div class="catalog-specify">
         <p class="catalog-result">Найдено гостиниц: 38</p>
-        <form action="https://echo.htmlacademy.ru/" class="catalog-filter-specify" method="get">
+<!--        <form action="https://echo.htmlacademy.ru/" class="catalog-filter-specify" method="get">-->
           <fieldset class="catalog-filter-specify-group">
             <legend class="visually-hidden">Уточняющие параметры</legend>
             <select aria-label="Сортировка." class="select select-control">
@@ -156,7 +156,7 @@
               <span class="visually-hidden">Показать список</span>
             </a>
           </fieldset>
-        </form>
+<!--        </form>-->
       </div>
 
       <section class="hotel">
@@ -265,7 +265,7 @@
           </li>
         </ul>
 
-        <form action="https://echo.htmlacademy.ru/" method="get">
+        <form action="https://echo.htmlacademy.ru/" class="hotel-quantity" method="get">
           <label class="hotel-quantity-result">Гостиниц на странице:
             <select class="select hotel-quantity-number" name="quantity">
               <option selected value="4">4</option>
@@ -279,7 +279,7 @@
     </div>
     <section class="subscription">
       <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-      <p class="subscription-promise">Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <p class="subscription-promise">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
       <form action="https://echo.htmlacademy.ru/" class="subscription-form" method="post">
         <label class="visually-hidden" for="subscription-email">Email</label>
         <input class="field" id="subscription-email" name="subscription-email" placeholder="Ваш e-mail" required
@@ -290,42 +290,40 @@
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer-container">
-      <section class="footer-social">
-        <h2 class="visually-hidden">Социальные сети</h2>
-        <ul class="footer-social-list">
-          <li class="footer-social-item footer-social-item-vk">
-            <a href="https://vk.com/htmlacademy" target="_blank">
-              <span class="visually-hidden">VK</span>
-            </a>
-          </li>
-          <li class="footer-social-item footer-social-item-telegram">
-            <a href="https://t.me/htmlacademy" target="_blank">
-              <span class="visually-hidden">Telegram</span>
-            </a>
-          </li>
-          <li class="footer-social-item footer-social-item-youtube">
-            <a href="https://www.youtube.com/user/htmlacademyru" target="_blank">
-              <span class="visually-hidden">Youtube</span>
-            </a>
-          </li>
-        </ul>
-      </section>
+    <section class="footer-social">
+      <h2 class="visually-hidden">Социальные сети</h2>
+      <ul class="footer-social-list">
+        <li class="footer-social-item footer-social-item-vk">
+          <a href="https://vk.com/htmlacademy" target="_blank">
+            <span class="visually-hidden">VK</span>
+          </a>
+        </li>
+        <li class="footer-social-item footer-social-item-telegram">
+          <a href="https://t.me/htmlacademy" target="_blank">
+            <span class="visually-hidden">Telegram</span>
+          </a>
+        </li>
+        <li class="footer-social-item footer-social-item-youtube">
+          <a href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+            <span class="visually-hidden">Youtube</span>
+          </a>
+        </li>
+      </ul>
+    </section>
 
-      <section class="footer-contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <address class="footer-contacts-address">
-          <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        </address>
-      </section>
+    <section class="footer-contacts">
+      <h2 class="visually-hidden">Контакты</h2>
+      <address class="footer-contacts-address">
+        <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      </address>
+    </section>
 
-      <section class="footer-copyright">
-        <h2 class="visually-hidden">Ссылка на сайт html-Academy</h2>
-        <a href="https://htmlacademy.ru" target="_blank">
-          <img alt="Логотип Html-Academy." height="34" src="./content/images/logo-htmlacademy.svg" width="115">
-        </a>
-      </section>
-    </div>
+    <section class="footer-copyright">
+      <h2 class="visually-hidden">Ссылка на сайт html-Academy</h2>
+      <a href="https://htmlacademy.ru" target="_blank">
+        <img alt="Логотип Html-Academy." height="34" src="./content/images/logo-htmlacademy.svg" width="115">
+      </a>
+    </section>
   </footer>
 </div>
 </body>
