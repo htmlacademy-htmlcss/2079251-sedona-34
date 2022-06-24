@@ -196,7 +196,7 @@ img {
 .welcome {
   background-image: url("../images/background-welcome.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   background-color: #2b4049;
   text-align: center;
   padding-top: 51px;
@@ -407,7 +407,6 @@ img {
 }
 
 .subscription .subscription-field {
-  margin: 0;
   padding: 0;
   border: 0;
   display: inline-block;
@@ -418,7 +417,6 @@ img {
   font-size: 18px;
   line-height: 21px;
   width: 600px;
-  text-decoration: none;
   border-radius: 10px 0 0 10px;
   background-color: #f2f2f2;
 }
@@ -426,7 +424,7 @@ img {
 .subscription.subscription-with-background {
   background-image: url("../images/background-subscription.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   background-color: #7cabab;
   color: #fff;
 }
@@ -509,7 +507,7 @@ img {
 .title-and-filters {
   background-image: url("../images/background-filter.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   background-color: #7cabab;
   color: #fff;
   padding: 35px 70px 70px;
@@ -607,13 +605,7 @@ img {
   min-width: 338px;
   max-width: 360px;
   margin: 0;
-  padding: 0;
   margin-right: 191px;
-}
-
-.catalog-specify .catalog-filter-specify {
-  /*display: flex;*/
-  /*justify-content: space-between;*/
 }
 
 .catalog-specify .catalog-filter-specify-group {
@@ -668,8 +660,9 @@ img {
 
 .hotel-list .hotel-card {
   display: grid;
-  grid-template-columns: 140px 140px;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: 211px max-content min-content auto min-content;
+  align-items: end;
   gap: 16px 20px;
   padding: 20px;
 }
@@ -704,7 +697,7 @@ img {
 }
 
 .hotel-card .stars {
-  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .hotel-card .hotel-rating-star {
@@ -753,12 +746,6 @@ img {
   color: #000;
 }
 
-/*.hotel-quantity {*/
-/*  display: flex;*/
-/*  justify-content: space-between;*/
-/*  min-width: 386px;*/
-/*}*/
-
 .hotel-quantity-result,
 .hotel-quantity-number {
   font-size: 18px;
@@ -766,10 +753,6 @@ img {
   color: #333333;
   margin-top: 5px;
   margin-bottom: 5px;
-}
-
-.hotel-quantity-result {
-  /*margin-right: 51px;*/
 }
 
 .hotel-quantity-number {
