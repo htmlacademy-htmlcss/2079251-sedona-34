@@ -498,10 +498,7 @@ img {
 .subscription .subscription-field {
   display: inline-block;
   width: 600px;
-  padding: 0;
-  padding-top: 20px;
-  padding-bottom: 19px;
-  padding-left: 22px;
+  padding: 20px 0 19px 22px;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
@@ -1475,8 +1472,3 @@ img {
 .select.hotel-quantity .select-control {
   width: 160px;
 }
-
-
-
-
-
