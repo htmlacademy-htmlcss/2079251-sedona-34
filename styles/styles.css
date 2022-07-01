@@ -301,7 +301,8 @@ img {
 }
 
 .advantages .advantages-header {
-  padding: 0 90px 120px;
+  margin-bottom: 90px;
+  padding: 0 120px;
 }
 
 .advantages .advantages-heading {
@@ -419,7 +420,7 @@ img {
 }
 
 .advantages-item.advantages-town .description-container {
-  margin-left: 85px;
+  margin-left: 82px;
 }
 
 .advantages-item.advantages-bridge .description-container {
@@ -1133,7 +1134,7 @@ img {
   font-size: 18px;
   line-height: 21px;
   color: #ffffff;
-  appearance: none;
+  appearance: textfield;
   background-color: transparent;
   border: 2px solid #ffffff;
   transition: border-color 0.5s, background-color 0.5s, box-shadow 0.5s;
@@ -1270,6 +1271,7 @@ img {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  background-color: #ffffff;
   background-image: url("../images/icons/arrow-filter.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
