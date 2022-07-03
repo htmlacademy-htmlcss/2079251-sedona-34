@@ -173,7 +173,6 @@ img {
 .navigation {
   position: relative;
   display: flex;
-  box-sizing: border-box;
   padding-left: 169px;
 }
 
@@ -498,13 +497,25 @@ img {
 .subscription .subscription-field {
   display: inline-block;
   width: 600px;
-  padding: 20px 0 19px 22px;
+  padding: 20px 20px 19px 22px;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
   background-color: #f2f2f2;
   border: 0;
   border-radius: 10px 0 0 10px;
+}
+
+.subscription .subscription-field:hover{
+  background-color: #e6e6e6;
+}
+
+.subscription .subscription-field:focus {
+  padding: 17px 20px 16px 19px;
+  background-color: #e6e6e6;
+  border: 3px solid #83b3d3;
+  border-right: 0;
+  outline: none;
 }
 
 .subscription.subscription-with-background {
@@ -571,7 +582,6 @@ img {
 
 .page-footer .footer-contacts {
   padding-top: 5px;
-  padding-bottom: 5px;
 }
 
 .page-footer .footer-contacts-address {
@@ -600,7 +610,6 @@ img {
 .page-footer .footer-copyright {
   width: 115px;
   padding-top: 8px;
-  padding-bottom: 8px;
 }
 
 .footer-copyright-link .footer-copyright-icon {
@@ -742,6 +751,10 @@ img {
   transition: background-color 0.5s;
 }
 
+.search-form-field::-webkit-inner-spin-button {
+  display: none;
+}
+
 .search-form .search-form-field::placeholder {
   color: rgba(0, 0, 0, 0.6);
 }
@@ -760,8 +773,7 @@ img {
   outline: 2px solid #000000;
 }
 
-.search-form .search-form-field.field-arrival,
-.search-form .search-form-field.field-departure {
+.search-form .search-form-field.field-calendar {
   width: 420px;
   background-image: url("../images/icons/calendar.svg");
   background-repeat: no-repeat;
@@ -1064,13 +1076,17 @@ img {
   transition: background-color 0.5s;
 }
 
+.control:focus {
+  outline: none;
+}
+
 .control:hover .control-mark {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
 .control:focus .control-mark {
   background-color: rgba(255, 255, 255, 0.6);
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
 }
 
 .control-input:active + .control-mark {
@@ -1128,6 +1144,10 @@ img {
   background-color: transparent;
   border: 2px solid #ffffff;
   transition: border-color 0.5s, background-color 0.5s, box-shadow 0.5s;
+}
+
+.range-input::-webkit-inner-spin-button {
+  display: none;
 }
 
 .catalog-filter-label:first-child .range-input {
