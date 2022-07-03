@@ -66,14 +66,6 @@ img {
   transition: background-color 0.5s;
 }
 
-.button:active {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.button:disabled {
-  background-color: #e5e5e5;
-}
-
 .button.button-small {
   padding: 9px 15px 8px;
 }
@@ -96,7 +88,6 @@ img {
   background-color: #68a2ca;
 }
 
-
 .button.button-selected {
   background-color: #7db54f;
 }
@@ -104,6 +95,14 @@ img {
 .button.button-selected:hover,
 .button.button-selected:focus {
   background-color: #6c9e42;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled {
+  background-color: #e5e5e5;
 }
 
 .button.button-inactive {
@@ -130,7 +129,7 @@ img {
 }
 
 .button.button-search {
-  min-width: 574px;
+  width: 574px;
 }
 
 .button.button-submit {
@@ -319,25 +318,30 @@ img {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 
 .advantages .advantages-item {
   display: flex;
-  vertical-align: middle;
   width: 400px;
   min-height: 384px;
   list-style: none;
 }
 
-.advantages-item .description-container {
+.advantages .advantages-big-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advantages-item .advantages-container {
   width: 233px;
   margin: auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .advantages-item .advantages-title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -405,23 +409,10 @@ img {
 .advantages-item.advantages-town {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 100%;
-  min-height: 768px;
-  background-image: url("../images/real-town.jpg");
-  background-repeat: no-repeat;
-  background-position: 400px 0;
 }
 
-.advantages-item.advantages-town .description-container {
-  margin-left: 82px;
-}
-
-.advantages-item.advantages-bridge .description-container {
-  margin-right: 85px;
-}
-
-.advantages-list-inserted .description-container::before {
+.advantages-list-inserted .advantages-container::before {
   content: "";
   display: block;
   width: 75px;
@@ -431,22 +422,21 @@ img {
   background-position: center;
 }
 
-.advantages-item.advantages-accommodation .description-container::before {
+.advantages-item.advantages-accommodation .advantages-container::before {
   background-image: url("../images/icons/accommodation.svg");
 }
 
-.advantages-item.advantages-food .description-container::before {
+.advantages-item.advantages-food .advantages-container::before {
   background-image: url("../images/icons/food.svg");
 }
 
-.advantages-item.advantages-souvenirs .description-container::before {
+.advantages-item.advantages-souvenirs .advantages-container::before {
   background-image: url("../images/icons/souvenirs.svg");
 }
 
 .advantages-item.advantages-bridge {
+  display: block;
   width: 100%;
-  background-image: url("../images/devil-bridge.jpg");
-  background-repeat: no-repeat;
 }
 
 /* Поиск гостиницы */
@@ -581,6 +571,7 @@ img {
 }
 
 .page-footer .footer-contacts {
+  max-width: 400px;
   padding-top: 5px;
 }
 
@@ -885,24 +876,27 @@ img {
 
 .field-number-wrapper .modal-field-controls {
   position: absolute;
-  bottom: 19px;
+  bottom: 16px;
   display: inline-block;
-  width: 13px;
-  height: 13px;
+  width: 19px;
+  height: 19px;
+  padding: 3px;
   font-size: 0;
   text-indent: 100%;
   background-repeat: no-repeat;
   background-position: center;
+  border: 0;
   opacity: 0.3;
+  cursor: pointer;
 }
 
 .field-number-wrapper .modal-field-minus {
-  left: 19px;
+  left: 16px;
   background-image: url("../images/icons/modal-minus.svg");
 }
 
 .field-number-wrapper .modal-field-plus {
-  right: 19px;
+  right: 16px;
   background-image: url("../images/icons/modal-plus.svg");
 }
 
@@ -911,18 +905,9 @@ img {
 }
 
 .field-number-wrapper .modal-field-controls:focus {
-  bottom: 16px;
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
   border-radius: 4px;
   opacity: 1;
-}
-
-.field-number-wrapper .modal-field-minus:focus {
-  left: 16px;
-}
-
-.field-number-wrapper .modal-field-plus:focus {
-  right: 16px;
 }
 
 .field-number-wrapper .modal-field-controls:active {
@@ -1286,13 +1271,13 @@ img {
 
 /* Дополнительная сортировка гостиниц */
 .main-catalog {
-  padding: 50px 71px 25px 73px;
+  padding: 54px 71px 25px 73px;
 }
 
 .catalog-specify {
   display: flex;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 53px;
 }
 
 .catalog-specify .catalog-result {
@@ -1301,7 +1286,7 @@ img {
   margin: 0;
   margin-right: 191px;
   font-size: 30px;
-  line-height: 60px;
+  line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -1459,7 +1444,7 @@ img {
 }
 
 .pagination-list .pagination-link {
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   font-size: 20px;
   line-height: 36px;

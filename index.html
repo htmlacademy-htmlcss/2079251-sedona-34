@@ -51,7 +51,7 @@
           </a>
         </li>
         <li class="navigation-item">
-          <button class="button button-primary button-small button-navigation"
+          <button class="button button-primary button-small button-navigation" type="button"
                   onclick="document.querySelector('.modal-container').classList.remove('modal-container-close')">Хочу
             сюда!
           </button>
@@ -79,30 +79,34 @@
       <!-- Список преимуществ -->
       <ol class="advantages-list">
         <li class="advantages-item background-primary advantages-town">
-          <div class="description-container">
-            <h3 class="advantages-title">Настоящий городок</h3>
-            <p class="advantages-number">№1</p>
-            <p class="advantages-description">Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов, там течёт своя
-              жизнь</p>
+          <div class="advantages-big-wrapper">
+            <div class="advantages-container">
+              <h3 class="advantages-title">Настоящий городок</h3>
+              <p class="advantages-number">№1</p>
+              <p class="advantages-description">Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов, там течёт своя
+                жизнь</p>
+            </div>
+            <img class="advantages-images" src="./content/images/real-town.jpg" alt="Улицы Седоны." width="800"
+                 height="384">
           </div>
 
           <ul class="advantages-list-inserted">
             <li class="advantages-item background-secondary advantages-accommodation">
-              <div class="description-container">
+              <div class="advantages-container">
                 <h3 class="advantages-title">Жильё</h3>
                 <p class="advantages-description">Рекомендуем пожить <br>в&nbsp;настоящем мотеле, <br>всё как в&nbsp;кино!
                 </p>
               </div>
             </li>
             <li class="advantages-item background-base advantages-food">
-              <div class="description-container">
+              <div class="advantages-container">
                 <h3 class="advantages-title">Еда</h3>
                 <p class="advantages-description">Всегда заказывайте<br> топовый фирменный бургер,<br> вы&nbsp;не&nbsp;разочаруетесь!
                 </p>
               </div>
             </li>
             <li class="advantages-item background-secondary advantages-souvenirs">
-              <div class="description-container">
+              <div class="advantages-container">
                 <h3 class="advantages-title">Сувениры</h3>
                 <p class="advantages-description">Не&nbsp;только китайского,<br> но&nbsp;и&nbsp;настоящего местного<br>
                   производства!
@@ -113,28 +117,32 @@
         </li>
 
         <li class="advantages-item background-primary advantages-bridge">
-          <div class="description-container">
-            <h3 class="advantages-title">Там есть<br> мост дьявола</h3>
-            <p class="advantages-number">№2</p>
-            <p class="advantages-description">Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь, разумеется</p>
+          <div class="advantages-big-wrapper">
+            <img class="advantages-images" src="./content/images/devil-bridge.jpg" alt="Страшный мост с обрывом."
+                 width="800" height="384">
+            <div class="advantages-container">
+              <h3 class="advantages-title">Там есть<br> мост дьявола</h3>
+              <p class="advantages-number">№2</p>
+              <p class="advantages-description">Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь, разумеется</p>
+            </div>
           </div>
         </li>
         <li class="advantages-item background-secondary">
-          <div class="description-container">
+          <div class="advantages-container">
             <h3 class="advantages-title">Небольшая<br> площадь</h3>
             <p class="advantages-number">№3</p>
             <p class="advantages-description">Все достопримечательности находятся очень близко</p>
           </div>
         </li>
         <li class="advantages-item background-tertiary">
-          <div class="description-container">
+          <div class="advantages-container">
             <h3 class="advantages-title">Красивая<br> дорога</h3>
             <p class="advantages-number">№4</p>
             <p class="advantages-description">Ехать в&nbsp;Седону из&nbsp;Лас-Вегаса совсем не&nbsp;скучно!</p>
           </div>
         </li>
         <li class="advantages-item background-secondary">
-          <div class="description-container">
+          <div class="advantages-container">
             <h3 class="advantages-title">Мало <br>туристов</h3>
             <p class="advantages-number">№5</p>
             <p class="advantages-description">Большинство едет в&nbsp;Гранд Каньон и&nbsp;толпится там</p>
@@ -149,7 +157,7 @@
       <p class="search-interest">Заинтересовались?</p>
       <p class="search-offer">Укажите предполагаемые даты поездки, <br>и&nbsp;мы&nbsp;покажем вам лучшие предложения
         гостиниц в&nbsp;Седоне&nbsp;&nbsp;&nbsp;</p> <!-- pixel-perfect, некорректный отступ в макете -->
-      <button class="button button-primary button-search">Поиск гостиницы в&nbsp;Седоне</button>
+      <button class="button button-primary button-search" type="button">Поиск гостиницы в&nbsp;Седоне</button>
     </section>
 
     <!-- Подписка на рассылку -->
@@ -237,7 +245,7 @@
   <!-- Модальное окно -->
   <div class="modal-container modal-container-close">
     <div class="modal modal-search">
-      <button class="modal-close-button"
+      <button class="modal-close-button" type="button"
               onclick="document.querySelector('.modal-container').classList.add('modal-container-close')">
         <span class="visually-hidden">Закрыть.</span>
       </button>
@@ -258,10 +266,10 @@
           </div>
           <label class="label-search" for="adults-quantity">Взрослые:</label>
           <div class="field-number-wrapper">
-            <span class="modal-field-controls modal-field-minus" tabindex="0">Минус</span>
+            <button class="modal-field-controls modal-field-minus" type="button" tabindex="0">Минус</button>
             <input class="search-form-field field-number" id="adults-quantity" min="1" name="adults-quantity" required
                    type="number" value="2">
-            <span class="modal-field-controls modal-field-plus" tabindex="0">Плюс</span>
+            <button class="modal-field-controls modal-field-plus" type="button" tabindex="0">Плюс</button>
           </div>
 
           <!-- Тултип -->
@@ -277,10 +285,10 @@
           </div>
 
           <div class="field-number-wrapper">
-            <span class="modal-field-controls modal-field-minus" tabindex="0">Минус</span>
+            <button class="modal-field-controls modal-field-minus" type="button" tabindex="0">Минус</button>
             <input class="search-form-field field-number" id="kids-quantity" min="0" name="kids-quantity"
                    required type="number" value="1">
-            <span class="modal-field-controls modal-field-plus" tabindex="0">Плюс</span>
+            <button class="modal-field-controls modal-field-plus" type="button" tabindex="0">Плюс</button>
           </div>
           <button class="button button-secondary button-modal" type="submit">Найти</button>
         </form>
